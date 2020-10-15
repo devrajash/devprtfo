@@ -36,7 +36,7 @@ def write_file_csv(data):
 		file_csv=csv.writer(database_csv,delimiter=',',quotechar='"',quoting=csv.QUOTE_MINIMAL)
 		file_csv.writerow([email1,subject1,message1])
 
-@app.route('/submit_f', methods=['POST', 'GET'])
+@app.route('/submit_f', methods=['POST', 'GET','PATCH'])
 def submit_f():
     if request.method == "POST":
        data=request.form.to_dict()
